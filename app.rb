@@ -13,5 +13,6 @@ get '/kallithea' do
 end
 
 get '/kitty' do
+  @random_name = %w(Aubameyang Mkhitarayan Lacazette).sample
   erb(:index)
 end
