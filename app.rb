@@ -12,7 +12,14 @@ get '/kallithea' do
   "Score a goal!"
 end
 
-get '/kitty' do
+get '/random-cat' do
   @random_name = %w(Aubameyang Mkhitarayan Lacazette).sample
+  erb(:index)
+end
+
+get '/named-cat' do
+  p params
+  @random_name = @params[:name]
+  @color = @params[:color]
   erb(:index)
 end
