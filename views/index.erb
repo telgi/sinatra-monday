@@ -1,5 +1,15 @@
-<h1>My name is <%= @random_name %></h1>
+<h1>My name is <%= @name %> and I am <%= @age %></h1>
 
 <div style='border: 3px dashed <%= @color %>'>
   <img src='http://bit.ly/1eze8aE'>
-</div>"
+</div>
+
+<% if !@name || @name.empty? %>
+
+<form action="/named-cat">
+  <input type="text" name="name">
+  <input type="text" name="age">
+  <input type="submit" value="Submit">
+</form>
+
+<% end %>
