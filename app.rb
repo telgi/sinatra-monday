@@ -1,6 +1,6 @@
 require 'sinatra'
 
-get '/josh' do
+get '/' do
   "Hello World"
 end
 
@@ -17,7 +17,11 @@ get '/random-cat' do
   erb(:index)
 end
 
-get '/named-cat' do
+get '/cat-form' do
+  erb(:form)
+end
+
+post '/named-cat' do
   p params
   @name = @params[:name]
   @color = @params[:color]
